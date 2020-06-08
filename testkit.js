@@ -1,0 +1,388 @@
+
+
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+
+$(document).ready(function () {
+
+   $("#sidebar").mCustomScrollbar({
+         theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('.text').toggleClass('addMargin');
+        $('#sidebarCollapse').toggleClass('addMargin');
+    });
+
+});
+
+$(document).ready(function () {
+
+  $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open or close navbar
+        $('#sidebar').toggleClass('active');
+        // close dropdowns
+       // $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  });
+
+});
+
+var btnIagree=document.querySelector("#iAgree")
+var min=document.querySelector("#min")
+var sec=document.querySelector("#sec")
+var nextBtn=document.querySelector("#next")
+var submitBtn=document.querySelector("#submit")
+var backBtn=document.querySelector("#back")
+var userInput=[];
+var i
+var j
+var k=0;
+var countNext=0;
+var countSubmit=0;
+var countBack=0;
+var set=document.querySelectorAll(".set");
+var minValue=0;
+var minTimer=30;
+var secValue=0;
+var secTimer=60;
+var minsTaken=0;
+var secsTaken=0;
+var start=document.querySelector("#start");
+var timer=document.querySelector("#timer")
+var input=document.querySelectorAll("input");
+var label=document.querySelectorAll("label");
+var resultBtn=document.querySelector("#result")
+var m=0;
+var n=0;
+var duration=document.querySelector("#duration");
+var timeout;
+var result=0;
+var display=document.querySelector("#display")
+var score=document.querySelector("#score")
+var buttons=document.querySelectorAll("div [class='buttons']")
+var counter1=0;
+var counter2=0;
+
+backBtn.disabled=true;
+backBtn.classList.add("cursor")
+
+
+
+iAgree.addEventListener("click",function(){
+  start.classList.remove("hide")
+  iAgree.classList.add("hide")
+})
+
+
+start.addEventListener("click", function() {
+    start.classList.add("hide");
+    set[m].classList.remove("hide");
+    nextBtn.classList.remove("hide");
+    submitBtn.classList.remove("hide");
+    backBtn.classList.remove("hide");
+    timer.classList.remove("hide");
+    secValue=setInterval(function(){
+   
+     if(secTimer>0){
+        secTimer-=1
+        if(secTimer>=10){
+           sec.textContent=secTimer  ; 
+       }else{
+        sec.textContent="0"+ secTimer  ;
+       }
+        
+    }else{
+      
+        secTimer=60
+        secTimer-=1
+        if(secTimer>10){
+           sec.textContent=secTimer ; 
+       }else{
+        sec.textContent="0"+ secTimer  ;
+       }
+      }
+   
+    
+    },1000)
+
+    minValue=setInterval(function(){
+     minTimer-=1
+
+     if(minTimer>=0){
+     
+        if(minTimer>10){
+           min.textContent=minTimer ; 
+       }else{
+        min.textContent="0"+minTimer ;
+       }
+        
+    }
+
+    },60000)
+
+ function stop(){
+ 
+  clearInterval(minValue);
+  clearInterval(secValue);
+   for(i=0;i<3;i++){
+    if(!(set[i].classList.contains("hide")))
+      set[i].classList.add("hide")  ;  
+   }
+    nextBtn.classList.add("hide");
+    submitBtn.classList.add("hide");
+    backBtn.classList.add("hide");
+    timer.classList.add("hide");
+    result.classList.remove("hide")
+    duration.textContent="30:00";
+}
+ 
+ timeout=setTimeout(stop,1800000);  
+});
+
+ 
+
+
+       
+
+
+ questions={
+    0:"Suppose we want to arragnge five nos. of DIVs so that DIV4 is placed above DIV1. Now, which css property will we use to control the order of stack?",
+    1:" Can we align a Block element by setting the left and right margins ?",
+    2:"What should be the table width, so that the width of a table adjust to the current width of the browser window?",
+    3:"How can we write comment along with CSS code ?",
+    4:"Which CSS property is used to control the text size of an element ?",
+    5: "HTML stands for?",
+    6:"The attribute of <form> tag?",
+    7:"The body tag is usually used after ?",
+    8:" If we want define style for an unique element, then which css selector will we use ?",
+    9:"If we want to show an Arrow as cursor, then which value we will use ?",
+    10:"If we want to use a nice looking green dotted border around an image, which css property will we use?",
+    11:"Which of the following is not JavaScript Data Types?",
+    12:"Inside which HTML element do we put the JavaScript?",
+    13:"HTML is what type of language ?",
+    14:"Fundamental HTML Block is known as ___________.",
+    15:"How can you make a bulleted list with numbers?",
+    16:"What tag is used to display a picture in a HTML page?",
+    17:"HTML web pages can be read and rendered by _________.",
+    18:"Tags and texts that are not directly displayed on the page are written in _____ section.",
+    19:"Which of the following is not a browser ?"
+}
+
+
+
+var idValueFor=[    "d","s","z","x",
+                    "yes","no",
+                    "640","100","full-screen","1200",
+                    "asterisk","slash","exclamation","at",
+                    "fstyle","tsize","tstyle","fsize",
+                    "hypertext","hightext","hypertabular","none1",
+                    "method","action","both",
+                    "title","head1","form","script",
+                    "id","text","class","none2",
+                    "pointer","default","arrow","notallowed",
+                    "color","decoration","style","none3",
+                    "undefined","number","float","null",
+                    "script","head","link","meta",
+                    "scripting","markup","network","none4",
+                    "body","tag","attribute","none5",
+                    "list","li","ol","ul",
+                    "picture","src","alt","img",
+                    "compiler","browser","server",
+                    "head2","html","body",
+                    "bing","netscape","opera","firefox"
+                  ]
+
+var optionsDisplay={
+    0:["d-index","s-index","z-index","x-index"],
+    1:["Yes, we can","Not Possible"],
+    2:["640 pixels","100%","full-screen","1200 pixels"],
+    3:["/* a comment */","/ a comment /"," !a comment!","@ a comment @"],
+    4:["font-style","text-size","text-style","font-size"],
+    5:["Hyper Text Markup Language","High Text Markup Language","Hyper Tabular Markup Language","None of the above"],
+    6:["Method","Action","Both"],
+    7:["Title Tag","Head Tag","Form Tag","Script Tag"],
+    8:["Id","Text","Class","None of the above"],
+    9:["Pointer","Default","Arrow","Not-Allowed"],
+    10:["border-color","border-decoration","border-style","None of the above"],
+    11:["undefined","number","float","null"],
+    12:["<script>","<head>","<link>","<meta>"],
+    13:["Scripting Language","Markup Language","Network Protocol","None of the above"],
+    14:["HTML Body","HTML Tag","HTML Attribute","None of these"],
+    15:["<list>","<li>","<ol>","<ul>"],
+    16:["picture","src","alt","img"],
+    17:["Compiler","Web Browser","Server","Interpreter"],
+    18:["<head>","<html>","<body>"],
+    19:["Microsofts Bing","Netscape Navigator","Opera","Firefox"]
+ }
+
+answers=["z","yes","100","asterisk","fsize","hypertext","both","head1","id","default","style","float","script","markup","tag","ul","img","browser","head","bing"];
+userInput.length=Object.keys(questions).length;
+
+
+for(i=0;i<idValueFor.length;i++){
+    input[i].id=idValueFor[i];
+    input[i].value=idValueFor[i];
+    label[i].htmlFor=idValueFor[i];
+}
+
+
+for(i=0;i< Object.keys(optionsDisplay).length;i++){
+    for(j=0;j< Object.keys(optionsDisplay[i]).length;j++){
+        label[k++].textContent=optionsDisplay[i][j];
+    }
+}
+
+
+
+var element=[];
+
+for(i=0;i<Object.keys(questions).length;i++){
+    element[i]=document.getElementsByName(i);
+}
+
+
+
+
+ 
+ 
+ var parah=document.querySelectorAll(".parah");
+ for(i=0;i< Object.keys(questions).length;i++){
+    parah[i].textContent=questions[i];
+ }
+ 
+ 
+    if(!(set[0].classList.contains("hide"))){
+      backBtn.disabled=true;
+    }
+
+
+
+
+nextBtn.addEventListener("click",function(){
+countNext+=1;
+counter1+=1;
+backBtn.disabled=false;
+n =(countNext + countSubmit)-countBack;
+          if(n<((Object.keys(questions).length/4) - 1)){
+          set[n-1].classList.add("hide");
+          set[n].classList.remove("hide");
+     }else if(n === ((Object.keys(questions).length/4) - 1)) {
+       set[n-1].classList.add("hide");
+       set[n].classList.remove("hide");
+       submitBtn.textContent="Finish";
+       next.classList.add("hide");
+
+     }else{
+      set[n-1].classList.add("hide");
+      for(i=0;i<3;i++){
+        buttons[i].classList.add("hide");
+      }
+      
+     }
+
+   
+})
+
+
+ 
+
+submitBtn.addEventListener("click",function(){
+ countSubmit+=1;
+ counter1=0;
+ counter2=0;
+ backBtn.disabled=true;
+ backBtn.classList.add("cursor");
+ m=(countNext + countSubmit) - countBack;
+
+
+  for(i=0; i< ((countNext*4 + countSubmit*4) - (countBack*4)) ; i++) 
+    for( j = 0; j < element[i].length; j++) { 
+              if((element[i][j]).checked) {
+                  userInput[i]=element[i][j].value; 
+              }
+    }
+    
+   
+
+     if(m<((Object.keys(questions).length/4) - 1)){    
+          set[m-1].classList.add("hide");
+          set[m].classList.remove("hide");
+
+}  else if(m===((Object.keys(questions).length/4) - 1)){
+     set[m-1].classList.add("hide");
+     set[m].classList.remove("hide");
+     nextBtn.classList.add("hide");
+     submitBtn.textContent="Finish";
+}
+else{
+    for(i=0;i<answers.length;i++){
+      if(userInput[i]===answers[i]){
+        result+=1;
+      }
+    }
+    set[m-1].classList.add("hide");
+    submitBtn.classList.add("hide");
+    backBtn.classList.add("hide");
+    resultBtn.classList.remove("hide")
+    clearTimeout(timeout);
+    clearInterval(minValue);
+    clearInterval(secValue);
+    if((60-sec.textContent)>9){
+      secsTaken= 60-parseInt(sec.textContent)
+    }else{
+      secsTaken="0"+(60-parseInt(sec.textContent))
+    }
+
+    if(30-min.textContent>9){
+      minsTaken=30-parseInt(min.textContent)
+    }else{
+      minsTaken="0"+(30-parseInt(min.textContent))
+    }
+    duration.textContent=minsTaken + ":" + secsTaken
+    timer.classList.add("hide");
+
+
+}
+})
+
+resultBtn.addEventListener("click",function(){
+      resultBtn.classList.add("hide")
+      display.classList.remove("hide");
+      score.textContent=result;
+})
+
+backBtn.addEventListener("click",function(){
+    countBack+=1;
+    counter2+=1;
+    n =(countNext + countSubmit) - countBack;
+   
+  
+  if(counter2<counter1){
+  submitBtn.textContent="Submit";
+  next.classList.remove("hide")
+  set[n].classList.remove("hide");
+  set[n+1].classList.add("hide");
+ }
+ else if((counter2===counter1)||(n===1)){
+  submitBtn.textContent="Submit";
+  next.classList.remove("hide")
+  set[n].classList.remove("hide");
+  set[n+1].classList.add("hide");
+  backBtn.disabled=true;
+  backBtn.classList.add("cursor");
+ }
+
+})

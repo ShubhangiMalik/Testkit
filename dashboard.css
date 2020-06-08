@@ -1,0 +1,227 @@
+#sidebarCollapse{
+    -webkit-box-shadow: 0 10px 15px -6px gray;
+       -moz-box-shadow: 0 10px 15px -6px gray;
+            box-shadow: 0 10px 15px -6px gray;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    float: left;
+    padding-left:10px;
+    padding-top:8px;
+    color:white;
+    background-color: #283A90;
+   
+    
+}
+
+#sidebarCollapse:hover{
+    box-shadow: none;
+    margin-top:6px;
+    transform: scale(0.9);
+}
+.nav{
+    height: 50px;
+    padding-top: 6px;
+    margin-bottom: 7px;
+    margin-right: 10px;
+    background-color: rgba(211,211,211,0.2)
+}
+.nav-link {
+    margin:0;
+    padding: 5px;
+    opacity: 0.7;
+}
+
+.nav-link i{
+    color:black;
+    
+    border-left: 1px solid black;
+    padding-left:  9px;
+    text-shadow: 2px 1px 2px gray;
+
+}
+
+.wrapper {
+   
+   display: flex;
+   width: 100%;
+}
+
+
+
+#sidebar.active {
+    margin-left: -250px;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Montaga', serif;
+    background: white;
+}
+
+
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 220px;
+    height: 100vh;
+    background: #2C5197;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 10px;
+    background:#283A90;
+    border: 1px solid black;
+    box-shadow: 2px 3px 8px -3px  black;
+
+}
+
+#sidebar ul.components {
+    
+    padding: 20px 0px 20px 5px;
+    }
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    margin-top: 3px;
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #7386D5;
+    background: #fff;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+.addMargin{
+    transition: 0.3s;
+    margin-left: 226px;
+}
+
+.card-body{
+    padding: 10px;
+    font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+.card a{
+
+   
+    display: inline;
+    float: right;
+    margin:10px ;
+    text-shadow: 3px 3px 3px  gray; 
+     -webkit-box-shadow: 0 8px 6px -6px gray;
+       -moz-box-shadow: 0 8px 6px -6px gray;
+            box-shadow: 0 8px 6px -6px gray;
+    color: black; 
+    padding: 5px;
+}
+
+.card a:hover {
+   box-shadow: none;
+    margin-top: 12px;
+  
+}
+
+.heading{
+    height: 180px;
+    background-color: red;
+    text-align: right;
+    margin: 0;
+    padding: 10px;
+    font-size: calc(15px + (16 - 15) * ((100vw - 300px) / (1600 - 300)));
+    text-shadow: none;
+    font-weight: bold;
+    color: white;
+}
+
+.card{
+    padding:0;
+    margin: 15px;
+    text-shadow: 1px 2px 2px  rgb(192,192,192); 
+}
+
+#blank1{
+    
+    height: 380px;
+    width: 300px;
+    margin:15px;
+}
+
+.parah{
+    font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
+    margin-top: 20px;     
+}
+
+#access{
+    padding: 3px 10px;
+}
+
+#goals{
+    height: 180px;
+}
+
+#card{
+    height: 230px;
+    padding:10px;
+}
+
+
+#align{
+    margin-left:auto;
+}
+
+#align b{
+    font-size: 18px;
+}
+.blank2{
+     
+    height: 230px;
+    margin:10px;
+}
+
+.shadow{
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+-moz-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+-o-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}

@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-4/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="testkit.css">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    
+    <title>Test Portal</title>
+  </head>
+
+  <body>
+            
+    <button type="button" id="sidebarCollapse" class="addMargin btn btn-md">
+        <i class="fas fa-align-left"></i>
+                    
+    </button>
+               
+        
+    
+    <ul class="nav justify-content-end ">
+
+  <li class="nav-item">
+    <a class="nav-link active" href="#"><b>Tarun Dixit</b></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="far fa-bell "></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="fas fa-cog "></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt "></i></a>
+  </li>
+  
+</ul>
+   
+    
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Test Kit</h3>
+        </div>
+
+        <ul class="list-unstyled components mt-1">
+          <!-- <p>Dummy Heading</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>  -->
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+            <!--    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>-->
+            <li class="active">
+                <a href="#">Test Kit</a>
+            </li>
+            <li>
+                <a href="#">Result</a>
+            </li> <br><br><br><br><br><hr>
+
+        </ul>
+        <ul class="components mt-4">
+            <li><a href="#">Discussion</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+
+        </ul>
+    </nav>
+    <!-- Page Content -->
+    
+</div>
+
+
+<div class="container-fluid">
+     <p class="text  addMargin mt-5" id="course"><b>Software Engineering</b> From Edx (Course ID 1223)</p>
+  <div class="buttons text  addMargin " id="iAgree">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et nisi dignissim, porttitor ante non, aliquam velit. Ut vulputate mauris ut dapibus semper. Donec a pretium urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. In lacinia eleifend purus nec euismod.  </p>
+      <button ><b>I agree</b></button>
+  </div>
+
+  <div id="start" class="addMargin text  buttons hide "><button class="btn  btn-lg btn-outline btn-effect"><span>Start Test</span> </button>
+  </div><div id="timer" class="hide">
+   <i class="fas fa-stopwatch fa-lg"></i>  <span id="min">30</span>:<span id="sec">00</span></div>
+<div class="set hide"> 
+<div class="row text addMargin justify-content-around  ">
+    <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+     <div>
+      <input type="radio"  
+     name="0" >  
+      <label ></label><br>
+      <input type="radio" 
+       name="0"     >
+      <label ></label><br>
+      <input type="radio" 
+          name="0"   >
+      <label ></label><br>
+      <input type="radio" 
+          name="0"   >
+      <label ></label><br>
+      
+     </div> 
+  </div>  
+
+
+   
+ <div class="col-10 col-lg-5 ques">
+            <p  class="parah"></p>
+    <div>
+        <input type="radio"   
+           name="1" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="1" >
+        <label ></label><br>
+    </div> 
+ </div>
+</div>
+
+   <div class="row text addMargin justify-content-around ">
+       <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+       <div>
+        <input type="radio"   
+           name="2" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="2" >
+        <label ></label><br>
+        <input type="radio"
+            name="2" >
+        <label ></label><br>
+        <input type="radio" 
+          name="2"   >
+      <label ></label><br>
+      </div> 
+    </div>
+     
+ 
+
+ <div class="col-10 col-lg-5 ques">
+           <p  class="parah"></p>
+        <div>
+        <input type="radio"  
+           name="3" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="3" >
+        <label ></label><br>
+        <input type="radio" 
+            name="3" >
+        <label></label><br>
+        <input type="radio" 
+            name="3" >
+        <label></label><br>
+      </div>  
+    </div>
+  </div>
+</div>
+ 
+<div class="set hide">
+<div class="row text addMargin justify-content-around ">
+       
+     <div class="col-10 col-lg-5 ques ">
+           <p  class="parah"></p>
+   <div>
+    <input type="radio" 
+           name="4" >
+    <label ></label><br>
+    <input type="radio" 
+           name="4" >
+    <label ></label><br>
+    <input type="radio" 
+           name="4" >
+    <label ></label><br>
+    <input type="radio" 
+            name="4" >
+        <label></label><br>
+   </div> 
+ </div>
+
+   <div class="col-10 col-lg-5 ques">
+           <p  class="parah"></p>
+   <div>
+    <input type="radio" 
+           name="5" >
+    <label ></label><br>
+    <input type="radio" 
+           name="5" >
+    <label ></label><br>
+    <input type="radio" 
+           name="5" >
+    <label ></label><br>
+    <input type="radio" 
+           name="5" >
+    <label ></label><br>
+  
+   </div> 
+  </div>
+</div>
+
+
+<div class="row text addMargin justify-content-around ">
+
+ <div class="col-10 col-lg-5 ques  ">
+           <p  class="parah"></p>
+   <div>
+    <input type="radio"  
+           name="6"> 
+    <label ></label><br>
+    <input type="radio" 
+           name="6" >
+    <label ></label><br>
+    <input type="radio"
+           name="6" >
+    <label ></label><br>
+    
+   </div> 
+ </div>
+
+ <div class="col-10 col-lg-5 ques   ">
+           <p  class="parah"></p>
+   <div>
+    <input type="radio"  
+           name="7" >
+    <label ></label><br>
+    <input type="radio"
+           name="7" >
+    <label></label><br>
+    <input type="radio" 
+           name="7" >
+    <label></label><br>
+    <input type="radio" 
+            name="7" >
+        <label></label><br>
+   </div> 
+ </div>
+</div> 
+</div>
+
+<div class="set hide"> 
+<div class="row text addMargin justify-content-around  ">
+    <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+     <div>
+      <input type="radio"  
+     name="8" >  
+      <label ></label><br>
+      <input type="radio" 
+       name="8"     >
+      <label ></label><br>
+      <input type="radio" 
+          name="8"   >
+      <label ></label><br>
+      <input type="radio" 
+            name="8" >
+        <label></label><br>
+     </div> 
+  </div>  
+
+
+   
+ <div class="col-10 col-lg-5 ques">
+            <p  class="parah"></p>
+    <div>
+        <input type="radio"   
+           name="9" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="9" >
+        <label ></label><br>
+        <input type="radio" 
+            name="9" >
+        <label ></label><br>
+        <input type="radio" 
+            name="9" >
+        <label></label><br>
+    </div> 
+ </div>
+</div>
+
+   <div class="row text addMargin justify-content-around ">
+       <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+       <div>
+        <input type="radio"   
+           name="10" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="10" >
+        <label ></label><br>
+        <input type="radio"
+            name="10" >
+        <label ></label><br>
+        <input type="radio" 
+            name="10" >
+        <label></label><br>
+      </div> 
+    </div>
+     
+ 
+
+ <div class="col-10 col-lg-5 ques">
+           <p  class="parah"></p>
+        <div>
+        <input type="radio"  
+           name="11" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="11" >
+        <label ></label><br>
+        <input type="radio" 
+            name="11" >
+        <label></label><br>
+        <input type="radio" 
+            name="11" >
+        <label></label><br>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<div class="set hide"> 
+<div class="row text addMargin justify-content-around  ">
+    <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+     <div>
+      <input type="radio"  
+     name="12" >  
+      <label ></label><br>
+      <input type="radio" 
+       name="12"     >
+      <label ></label><br>
+      <input type="radio" 
+          name="12"   >
+      <label ></label><br>
+      <input type="radio" 
+            name="12" >
+        <label></label><br>
+     </div> 
+  </div>  
+
+
+   
+ <div class="col-10 col-lg-5 ques">
+            <p  class="parah"></p>
+    <div>
+        <input type="radio"   
+           name="13" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="13" >
+        <label ></label><br>
+        <input type="radio" 
+            name="13" >
+        <label ></label><br>
+        <input type="radio" 
+            name="13" >
+        <label></label><br>
+    </div> 
+ </div>
+</div>
+
+   <div class="row text addMargin justify-content-around ">
+       <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+       <div>
+        <input type="radio"   
+           name="14" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="14" >
+        <label ></label><br>
+        <input type="radio"
+            name="14" >
+        <label ></label><br>
+        <input type="radio" 
+            name="14" >
+        <label></label><br>
+      </div> 
+    </div>
+     
+ 
+
+ <div class="col-10 col-lg-5 ques">
+           <p  class="parah"></p>
+        <div>
+        <input type="radio"  
+           name="15" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="15" >
+        <label ></label><br>
+        <input type="radio" 
+            name="15" >
+        <label></label><br>
+        <input type="radio" 
+            name="15" >
+        <label></label><br>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<div class="set hide"> 
+<div class="row text addMargin justify-content-around ">
+       <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+       <div>
+        <input type="radio"   
+           name="16" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="16" >
+        <label ></label><br>
+        <input type="radio"
+            name="16" >
+        <label ></label><br>
+        <input type="radio" 
+            name="16" >
+        <label></label><br>
+      </div> 
+    </div>
+     
+ 
+
+ <div class="col-10 col-lg-5 ques">
+           <p  class="parah"></p>
+        <div>
+        <input type="radio"  
+           name="17" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="17" >
+        <label ></label><br>
+        <input type="radio" 
+            name="17" >
+        <label></label><br>
+        <input type="radio" 
+            name="17" >
+        <label></label><br>
+      </div>  
+    </div>
+  </div>
+
+
+<div class="row text addMargin justify-content-around  ">
+    <div class="col-10 col-lg-5 ques ">
+           <p class="parah"></p>
+     <div>
+      <input type="radio"  
+     name="18" >  
+      <label ></label><br>
+      <input type="radio" 
+       name="18"     >
+      <label ></label><br>
+      <input type="radio" 
+          name="18"   >
+      <label ></label><br>
+      
+     </div> 
+  </div>  
+
+
+   
+ <div class="col-10 col-lg-5 ques">
+            <p  class="parah"></p>
+    <div>
+        <input type="radio"   
+           name="19" > 
+        <label ></label><br>
+        <input type="radio" 
+           name="19" >
+        <label ></label><br>
+        <input type="radio" 
+            name="19" >
+        <label ></label><br>
+        <input type="radio" 
+            name="19" >
+        <label ></label><br>
+    </div> 
+ </div>
+</div>
+</div>
+        
+   <div class="buttons ">
+       <button class="btn btn-outline-primary btn-lg  hide" id="back" ><i class="fas fa-angle-double-left"></i>   Back</button>
+       <button class="btn btn-primary btn-lg  hide " id="submit" >Submit</button>
+       <button class="btn btn-outline-primary btn-lg hide " id="next"><span>Next  </span><i class="fas fa-angle-double-right"></i></button>
+   
+   </div>
+  
+<div class="hide buttons text addMargin" id="result">
+   
+       <button class="btn btn-lg btn-outline btn-effect" >
+            <span>View Result</span> 
+       </button>
+</div>
+<div class="hide text addMargin" id="display">
+<p><b>RESULT</b></P>
+<p>Score: <span id="score"></span> / 20</p>
+ <p>Duration: <span id="duration"></span></p>
+</div>
+</div>    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript" src="testkit.js"></script>
+  </body>
+</html>
