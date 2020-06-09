@@ -195,13 +195,13 @@ var idValueFor=[    "d","s","z","x",
                     "pointer","default","arrow","notallowed",
                     "color","decoration","style","none3",
                     "undefined","number","float","null",
-                    "script2","head","link","meta",
+                    "script2","head2","link","meta",
                     "scripting","markup","network","none4",
-                    "body","tag","attribute","none5",
+                    "body1","tag","attribute","none5",
                     "list","li","ol","ul",
                     "picture","src","alt","img",
                     "compiler","browser","server",
-                    "head2","html","body",
+                    "head3","html","body2",
                     "bing","netscape","opera","firefox"
                   ]
 
@@ -228,7 +228,7 @@ var optionsDisplay={
     19:["Microsofts Bing","Netscape Navigator","Opera","Firefox"]
  }
 
-answers=["z","yes","100","asterisk","fsize","hypertext","both","head1","id","default","style","float","script2","markup","tag","ul","img","browser","head","bing"];
+answers=["z","yes","100","asterisk","fsize","hypertext","both","head1","id","default","style","float","script2","markup","tag","ul","img","browser","head3","bing"];
 userInput.length=Object.keys(questions).length;
 
 
