@@ -1,4 +1,4 @@
-
+//********************jQuery for vertical navbar********************
 
 $(document).ready(function () {
 
@@ -31,14 +31,11 @@ $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         // open or close navbar
         $('#sidebar').toggleClass('active');
-        // close dropdowns
-       // $('.collapse.in').toggleClass('in');
-        // and also adjust aria-expanded attributes we use for the open/closed arrows
-        // in our CSS
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
   });
 
 });
+
+//***********************Vanilla Javascript*****************************
 
 var btnIagree=document.querySelector("#iAgree")
 var min=document.querySelector("#min")
@@ -46,37 +43,38 @@ var sec=document.querySelector("#sec")
 var nextBtn=document.querySelector("#next")
 var submitBtn=document.querySelector("#submit")
 var backBtn=document.querySelector("#back")
-var userInput=[];
+var set=document.querySelectorAll(".set")
+var start=document.querySelector("#start")
+var timer=document.querySelector("#timer")
+var input=document.querySelectorAll("input")
+var label=document.querySelectorAll("label")
+var resultBtn=document.querySelector("#result")
+var duration=document.querySelector("#duration")
+var display=document.querySelector("#display")
+var score=document.querySelector("#score")
+var buttons=document.querySelectorAll("div [class='buttons']")
+var userInput=[]
 var i
 var j
 var k=0;
 var countNext=0;
 var countSubmit=0;
 var countBack=0;
-var set=document.querySelectorAll(".set");
 var minValue=0;
 var minTimer=30;
 var secValue=0;
 var secTimer=60;
 var minsTaken=0;
 var secsTaken=0;
-var start=document.querySelector("#start");
-var timer=document.querySelector("#timer")
-var input=document.querySelectorAll("input");
-var label=document.querySelectorAll("label");
-var resultBtn=document.querySelector("#result")
 var m=0;
 var n=0;
-var duration=document.querySelector("#duration");
 var timeout;
 var result=0;
-var display=document.querySelector("#display")
-var score=document.querySelector("#score")
-var buttons=document.querySelectorAll("div [class='buttons']")
 var counter1=0;
 var counter2=0;
+var element=[]
 
-backBtn.disabled=true;
+backBtn.disabled=true
 backBtn.classList.add("cursor")
 
 
@@ -89,19 +87,19 @@ iAgree.addEventListener("click",function(){
 
 start.addEventListener("click", function() {
     start.classList.add("hide");
-    set[m].classList.remove("hide");
-    nextBtn.classList.remove("hide");
-    submitBtn.classList.remove("hide");
-    backBtn.classList.remove("hide");
-    timer.classList.remove("hide");
+    set[m].classList.remove("hide")
+    nextBtn.classList.remove("hide")
+    submitBtn.classList.remove("hide")
+    backBtn.classList.remove("hide")
+    timer.classList.remove("hide")
     secValue=setInterval(function(){
    
      if(secTimer>0){
         secTimer-=1
         if(secTimer>=10){
-           sec.textContent=secTimer  ; 
+           sec.textContent=secTimer   
        }else{
-        sec.textContent="0"+ secTimer  ;
+        sec.textContent="0"+ secTimer  
        }
         
     }else{
@@ -109,9 +107,9 @@ start.addEventListener("click", function() {
         secTimer=60
         secTimer-=1
         if(secTimer>10){
-           sec.textContent=secTimer ; 
+           sec.textContent=secTimer  
        }else{
-        sec.textContent="0"+ secTimer  ;
+        sec.textContent="0"+ secTimer  
        }
       }
    
@@ -124,9 +122,9 @@ start.addEventListener("click", function() {
      if(minTimer>=0){
      
         if(minTimer>10){
-           min.textContent=minTimer ; 
+           min.textContent=minTimer 
        }else{
-        min.textContent="0"+minTimer ;
+        min.textContent="0"+minTimer 
        }
         
     }
@@ -139,27 +137,34 @@ start.addEventListener("click", function() {
   clearInterval(secValue);
    for(i=0;i<3;i++){
     if(!(set[i].classList.contains("hide")))
-      set[i].classList.add("hide")  ;  
+      set[i].classList.add("hide")   
    }
-    nextBtn.classList.add("hide");
-    submitBtn.classList.add("hide");
-    backBtn.classList.add("hide");
-    timer.classList.add("hide");
+    nextBtn.classList.add("hide")
+    submitBtn.classList.add("hide")
+    backBtn.classList.add("hide")
+    timer.classList.add("hide")
     result.classList.remove("hide")
-    duration.textContent="30:00";
+    for(j=0;i<answers.length;j++){
+      if(userInput[j]===answers[j]){
+        result+=1;
+      }
+    }
+//To display result and time taken by the user
+//display.classList.remove("hide")
+//score.textContent=result
+// duration.textContent="30:00"
 }
- 
- timeout=setTimeout(stop,1800000);  
+
+ timeout=setTimeout(stop,1800000)  
 });
 
  
 
-
        
-
+//Questions for the test
 
  questions={
-    0:"Suppose we want to arragnge five nos. of DIVs so that DIV4 is placed above DIV1. Now, which css property will we use to control the order of stack?",
+    0:"Suppose we want to arrange five nos. of DIVs so that DIV4 is placed above DIV1. Now, which css property will we use to control the order of stack?",
     1:" Can we align a Block element by setting the left and right margins ?",
     2:"What should be the table width, so that the width of a table adjust to the current width of the browser window?",
     3:"How can we write comment along with CSS code ?",
@@ -181,7 +186,7 @@ start.addEventListener("click", function() {
     19:"Which of the following is not a browser ?"
 }
 
-
+//Values for "id", "value", and "for" attributes of input and label tags.
 
 var idValueFor=[    "d","s","z","x",
                     "yes","no",
@@ -202,8 +207,11 @@ var idValueFor=[    "d","s","z","x",
                     "picture","src","alt","img",
                     "compiler","browser","server",
                     "head3","html","body2",
-                    "bing","netscape","opera","firefox"
+                    "bing","google","opera","firefox"
                   ]
+
+
+//Options for each question of the test
 
 var optionsDisplay={
     0:["d-index","s-index","z-index","x-index"],
@@ -225,32 +233,34 @@ var optionsDisplay={
     16:["picture","src","alt","img"],
     17:["Compiler","Web Browser","Server","Interpreter"],
     18:["<head>","<html>","<body>"],
-    19:["Microsofts Bing","Netscape Navigator","Opera","Firefox"]
+    19:["Microsofts Bing","Google","Opera","Firefox"]
  }
 
+
+//Answers
 answers=["z","yes","100","asterisk","fsize","hypertext","both","head1","id","default","style","float","script2","markup","tag","ul","img","browser","head3","bing"];
+
 userInput.length=Object.keys(questions).length;
 
 
 for(i=0;i<idValueFor.length;i++){
-    input[i].id=idValueFor[i];
-    input[i].value=idValueFor[i];
-    label[i].htmlFor=idValueFor[i];
+    input[i].id=idValueFor[i]
+    input[i].value=idValueFor[i]
+    label[i].htmlFor=idValueFor[i]
 }
 
 
 for(i=0;i< Object.keys(optionsDisplay).length;i++){
     for(j=0;j< Object.keys(optionsDisplay[i]).length;j++){
-        label[k++].textContent=optionsDisplay[i][j];
+        label[k++].textContent=optionsDisplay[i][j]
     }
 }
 
 
 
-var element=[];
 
 for(i=0;i<Object.keys(questions).length;i++){
-    element[i]=document.getElementsByName(i);
+    element[i]=document.getElementsByName(i)
 }
 
 
@@ -260,57 +270,57 @@ for(i=0;i<Object.keys(questions).length;i++){
  
  var parah=document.querySelectorAll(".parah");
  for(i=0;i< Object.keys(questions).length;i++){
-    parah[i].textContent=questions[i];
+    parah[i].textContent=questions[i]
  }
  
  
     if(!(set[0].classList.contains("hide"))){
-      backBtn.disabled=true;
+      backBtn.disabled=true
     }
 
 
 
 
 nextBtn.addEventListener("click",function(){
-countNext+=1;
-counter1+=1;
+countNext+=1
+counter1+=1
 backBtn.disabled=false;
 n =(countNext + countSubmit)-countBack;
           if(n<((Object.keys(questions).length/4) - 1)){
-          set[n-1].classList.add("hide");
-          set[n].classList.remove("hide");
+          set[n-1].classList.add("hide")
+          set[n].classList.remove("hide")
      }else if(n === ((Object.keys(questions).length/4) - 1)) {
-       set[n-1].classList.add("hide");
-       set[n].classList.remove("hide");
-       submitBtn.textContent="Finish";
-       next.classList.add("hide");
+       set[n-1].classList.add("hide")
+       set[n].classList.remove("hide")
+       submitBtn.textContent="Finish"
+       next.classList.add("hide")
 
      }else{
-      set[n-1].classList.add("hide");
+      set[n-1].classList.add("hide")
       for(i=0;i<3;i++){
-        buttons[i].classList.add("hide");
+        buttons[i].classList.add("hide")
       }
       
      }
 
-   
 })
 
 
  
 
 submitBtn.addEventListener("click",function(){
- countSubmit+=1;
- counter1=0;
- counter2=0;
- backBtn.disabled=true;
- backBtn.classList.add("cursor");
- m=(countNext + countSubmit) - countBack;
+ countSubmit+=1
+ counter1=0
+ counter2=0
+ backBtn.disabled=true
+ backBtn.classList.add("cursor")
+ m= (countNext + countSubmit) - countBack
 
 
   for(i=0; i< ((countNext*4 + countSubmit*4) - (countBack*4)) ; i++) 
     for( j = 0; j < element[i].length; j++) { 
               if((element[i][j]).checked) {
+                //Option selected by the user is stored in the "userInput" array
                   userInput[i]=element[i][j].value; 
               }
     }
@@ -318,28 +328,24 @@ submitBtn.addEventListener("click",function(){
    
 
      if(m<((Object.keys(questions).length/4) - 1)){    
-          set[m-1].classList.add("hide");
-          set[m].classList.remove("hide");
+          set[m-1].classList.add("hide")
+          set[m].classList.remove("hide")
 
 }  else if(m===((Object.keys(questions).length/4) - 1)){
-     set[m-1].classList.add("hide");
-     set[m].classList.remove("hide");
-     nextBtn.classList.add("hide");
-     submitBtn.textContent="Finish";
+     set[m-1].classList.add("hide")
+     set[m].classList.remove("hide")
+     nextBtn.classList.add("hide")
+     submitBtn.textContent="Finish"
 }
 else{
-    for(i=0;i<answers.length;i++){
-      if(userInput[i]===answers[i]){
-        result+=1;
-      }
-    }
-    set[m-1].classList.add("hide");
-    submitBtn.classList.add("hide");
-    backBtn.classList.add("hide");
+    
+    set[m-1].classList.add("hide")
+    submitBtn.classList.add("hide")
+    backBtn.classList.add("hide")
     resultBtn.classList.remove("hide")
-    clearTimeout(timeout);
-    clearInterval(minValue);
-    clearInterval(secValue);
+    clearTimeout(timeout)
+    clearInterval(minValue)
+    clearInterval(secValue)
     if((60-sec.textContent)>9){
       secsTaken= 60-parseInt(sec.textContent)
     }else{
@@ -351,38 +357,45 @@ else{
     }else{
       minsTaken="0"+(30-parseInt(min.textContent))
     }
-    duration.textContent=minsTaken + ":" + secsTaken
-    timer.classList.add("hide");
-
-
-}
+    
+    timer.classList.add("hide")
+    for(i=0;i<answers.length;i++){
+      if(userInput[i]===answers[i]){
+        result+=1
+      }
+    }
+  }
+//To display Result and Time Taken by the user 
+//display.classList.remove("hide")
+//score.textContent=result
+//duration.textContent=minsTaken + ":" + secsTaken
 })
 
 resultBtn.addEventListener("click",function(){
       resultBtn.classList.add("hide")
-      display.classList.remove("hide");
-      score.textContent=result;
+      display.classList.remove("hide")
+    
 })
 
 backBtn.addEventListener("click",function(){
-    countBack+=1;
-    counter2+=1;
-    n =(countNext + countSubmit) - countBack;
+    countBack+=1
+    counter2+=1
+    n =(countNext + countSubmit) - countBack
    
   
   if(counter2<counter1){
-  submitBtn.textContent="Submit";
+  submitBtn.textContent="Submit"
   next.classList.remove("hide")
-  set[n].classList.remove("hide");
-  set[n+1].classList.add("hide");
+  set[n].classList.remove("hide")
+  set[n+1].classList.add("hide")
  }
  else if((counter2===counter1)||(n===1)){
-  submitBtn.textContent="Submit";
+  submitBtn.textContent="Submit"
   next.classList.remove("hide")
-  set[n].classList.remove("hide");
-  set[n+1].classList.add("hide");
-  backBtn.disabled=true;
-  backBtn.classList.add("cursor");
+  set[n].classList.remove("hide")
+  set[n+1].classList.add("hide")
+  backBtn.disabled=true
+  backBtn.classList.add("cursor")
  }
 
 })
