@@ -34,6 +34,10 @@ $(document).ready(function () {
 
 var score= document.querySelector("#score")
 var duration= document.querySelector("#duration")
+var topic= document.querySelector("#topic")
+
+
+topic.textContent="Topic1"
 score.textContent= localStorage.getItem("resultValue")
 duration.textContent= localStorage.getItem("timeTaken")
 
