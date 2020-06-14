@@ -1,39 +1,15 @@
 //********************jQuery for vertical navbar********************
 
-$(document).ready(function () {
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
 
+$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').slideToggle("slow","linear", function(){
+      $('.text').toggleClass('addMargin')
+      $('#sidebarCollapse').toggleClass('addMargin')
+   });
+       
 });
 
-$(document).ready(function () {
-
-   $("#sidebar").mCustomScrollbar({
-         theme: "minimal"
-    });
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $('.text').toggleClass('addMargin');
-        $('#sidebarCollapse').toggleClass('addMargin');
-    });
-
-});
-
-$(document).ready(function () {
-
-  $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-    });
-
-    $('#sidebarCollapse').on('click', function () {
-        // open or close navbar
-        $('#sidebar').toggleClass('active');
-  });
-
-});
 
 //***********************Vanilla Javascript*****************************
 
@@ -76,7 +52,6 @@ var element=[]
 
 backBtn.disabled=true
 backBtn.classList.add("cursor")
-
 
 
 iAgree.addEventListener("click",function(){
@@ -149,9 +124,7 @@ start.addEventListener("click", function() {
         result+=1;
       }
     }
-//To display result and time taken by the user
-//display.classList.remove("hide")
-//score.textContent=result
+
 duration="30:00"
 }
 
@@ -365,17 +338,9 @@ else{
       }
     }
   }
-//To display Result and Time Taken by the user 
-//display.classList.remove("hide")
-//score.textContent=result
+
 duration=minsTaken + ":" + secsTaken
 })
-
-//resultBtn.addEventListener("click",function(){
-  //    resultBtn.classList.add("hide")
-    //  display.classList.remove("hide")
-    
-//})
 
 backBtn.addEventListener("click",function(){
     countBack+=1

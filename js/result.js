@@ -1,43 +1,22 @@
-$(document).ready(function () {
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
-
-});
-
-$(document).ready(function () {
-
-   $("#sidebar").mCustomScrollbar({
-         theme: "minimal"
-    });
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $('.text').toggleClass('addMargin');
-        $('#sidebarCollapse').toggleClass('addMargin');
-    });
-
-});
-
-$(document).ready(function () {
-
-  $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-    });
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-  });
-
-});
 
 var score= document.querySelector("#score")
 var duration= document.querySelector("#duration")
 var topic= document.querySelector("#topic")
+var resultBtn=document.querySelector("#result")
+var table=document.querySelector("table")
+
+  $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').slideToggle("slow","linear", function(){
+      $('.text').toggleClass('addMargin');
+      $('#sidebarCollapse').toggleClass('addMargin');
+    });
+  });
 
 
-topic.textContent="Topic1"
-score.textContent= localStorage.getItem("resultValue")
-duration.textContent= localStorage.getItem("timeTaken")
+
+ topic.textContent="Topic1"
+ score.textContent= localStorage.getItem("resultValue")
+ duration.textContent= localStorage.getItem("timeTaken")
+
+
 
