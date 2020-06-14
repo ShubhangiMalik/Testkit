@@ -145,7 +145,7 @@ a, a:hover, a:focus {
 
 #sidebar ul.components {
     
-    padding: 20px 0px 20px 5px;
+    padding: 20px 0;
     }
 
 #sidebar ul p {
@@ -163,19 +163,23 @@ a, a:hover, a:focus {
 
 
 #sidebar ul li a:hover {
-    color: #000099;
-    background: #fff;
+    color: #353839;
+    background-color: #f6d327;
+    font-weight: bold;
+    background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
 }
 
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #000099;
-    background: #fff;
+#sidebar ul li.active  {
+    color: #353839;
+    font-weight: bold;
+    background-color: #f6d327;
+    background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
 }
 
 
 .addMargin{
-    transition: 0.3s;
+    
     margin-left: 226px;
 }
 
