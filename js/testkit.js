@@ -363,11 +363,11 @@ $('#sidebarCollapse').on('click', function () {
   
   })
   
-  exitBtn.addEventListener("click", function () {
-    if (result < 10) {
-      result = "0" + result
-    }
-    localStorage.setItem("resultValue", result);
-    localStorage.setItem("timeTaken", duration);
-    window.location.href = "result.js";
-  })
+//   exitBtn.addEventListener("click", function () {
+//     if (result < 10) {
+//       result = "0" + result
+//     }
+//     localStorage.setItem("resultValue", result);
+//     localStorage.setItem("timeTaken", duration);
+//     window.location.href = "result.js";
+//   })
