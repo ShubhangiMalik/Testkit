@@ -1,8 +1,6 @@
 $('#sidebarCollapse').on('click', function () {
     $('#sidebar').slideToggle("slow", "linear", function () {
-       $('.text').toggleClass('addMargin');
-       $('#sidebarCollapse').toggleClass('addMargin');
+      $('.text').toggleClass('addMargin');
+      $('#sidebarCollapse').toggleClass('addMargin');
     });
- });
- 
-
+  });
